@@ -19,8 +19,8 @@ for iCount in range(0, len(lPoorPasswords)):
 
 # Expand the program with the following
 # 1 - All inputted passwords, must be a min of 8 letters/numbers
-# 2 - You must have a capital 
-# 3 - You must use numbers 
+# 2 - You must have a capital
+# 3 - You must use numbers
 
 iWordLen = len(sDesiredWord)
 bMeetsMinimum = iWordLen >= 8

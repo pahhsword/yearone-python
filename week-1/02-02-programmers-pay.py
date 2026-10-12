@@ -6,6 +6,7 @@ def programmers(a, b, c):
 
     print(tbl[i_tbl_len - 1] - tbl[0])
 
+
 programmers(147, 33, 526)
 programmers(33, 72, 74)
 programmers(1, 5, 9)

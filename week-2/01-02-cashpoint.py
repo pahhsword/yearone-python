@@ -3,11 +3,14 @@ valid = True
 file = open("workfile.txt", "r+")
 i_balance = int(file.readline())
 
+
 def exit_fn():
     valid = False
 
+
 def mobile_top_up():
     print("1")
+
 
 def cash_withdrawl():
     s_withdraw = input("How much would you like to withdraw >> ")
@@ -24,11 +27,14 @@ def display_balance():
     global i_balance
     print(f"Balance: £{i_balance:.2f}")
 
+
 def order_statement():
     print("4")
 
+
 def change_pin():
     print("5 fn")
+
 
 tbl = [
     ["0", "Exit", exit_fn],
@@ -36,7 +42,7 @@ tbl = [
     ["2", "Cash withdrawl", cash_withdrawl],
     ["3", "Display the balance", display_balance],
     ["4", "Order statement", order_statement],
-    ["5", "Change pin", change_pin]
+    ["5", "Change pin", change_pin],
 ]
 
 while valid:

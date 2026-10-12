@@ -2,6 +2,7 @@ MIN_WHEEL = 4
 MIN_BODY = 1
 MIN_FIGURES = 2
 
+
 def cars(i_wheels, i_bodies, i_figures):
     i_counter = 0
     b_check = True
@@ -16,6 +17,7 @@ def cars(i_wheels, i_bodies, i_figures):
             b_check = False
 
     return i_counter
+
 
 print(cars(2, 48, 76), cars(2, 48, 76) == 0)
 print(cars(43, 15, 87), cars(43, 15, 87) == 10)

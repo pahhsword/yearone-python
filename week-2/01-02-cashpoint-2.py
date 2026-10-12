@@ -2,6 +2,7 @@ import csv
 
 ATTEMPTS = 3
 
+
 class Cashpoint:
     balance = 0
     pin = 0000
@@ -15,7 +16,7 @@ class Cashpoint:
             i_cash_amount = int(input("How much cash would you like to withdraw?: £"))
             if i_cash_amount <= 0:
                 raise Exception("Balance amount must be above £0.00")
-            
+
             if this.balance - i_cash_amount <= 0:
                 raise Exception("You do not have enough money to withdraw")
 
@@ -39,17 +40,17 @@ class Cashpoint:
 
             this.pin = i_new_pin
             this.save()
-        
+
         except Exception as e:
             print(f"Exception: {e}")
 
     def save(this):
-        with open('cashpoint.csv', 'w', newline='') as csvfile:
-            fieldnames = ['balance', 'pin']
+        with open("cashpoint.csv", "w", newline="") as csvfile:
+            fieldnames = ["balance", "pin"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
             writer.writeheader()
-            writer.writerow({'balance': str(this.balance), 'pin': str(this.pin)})
+            writer.writerow({"balance": str(this.balance), "pin": str(this.pin)})
 
     def attemptLogin(this):
         while this.attempts > 0:
@@ -74,11 +75,12 @@ class Cashpoint:
         exit()
 
     def __init__(this):
-        with open('cashpoint.csv', newline='') as csvfile:
+        with open("cashpoint.csv", newline="") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 this.balance = int(row["balance"])
                 this.pin = int(row["pin"])
+
 
 cashpoint_var = Cashpoint()
 
@@ -88,7 +90,7 @@ l_options = [
     ["0", "Exit", cashpoint_var.exitCashpoint],
     ["2", "Cash withdrawl", cashpoint_var.cashWithdrawl],
     ["3", "Display the balance", cashpoint_var.displayBalance],
-    ["5", "Change pin", cashpoint_var.changePin]
+    ["5", "Change pin", cashpoint_var.changePin],
 ]
 
 while True:

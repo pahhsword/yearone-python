@@ -14,7 +14,7 @@ try:
 
     # Output the information for the user to see
     print(f"\nPRICE: £{float_price:.2f} ({str_amount}x £{COST_EACH:.2f})")
-    print(f"VAT:   £{float_vat:.2f} ({VAT_PERCENT * 100}%)") 
+    print(f"VAT:   £{float_vat:.2f} ({VAT_PERCENT * 100}%)")
     print(f"TOTAL: £{float_total:.2f}")
 except:
     print("You must enter a number amount")

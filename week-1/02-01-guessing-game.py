@@ -8,15 +8,19 @@ correct_count = 0
 total_guesses = 0
 str_number = ""
 
+
 # Function to generate random number
 def generate_number():
     return random.randint(BOUND_LOWER, BOUND_UPPER)
+
 
 random_number = generate_number()
 
 # Main Loop
 while not (str_number == EXIT_CODE):
-    str_number = input(f"Please enter in a number between {BOUND_LOWER} and {BOUND_UPPER}: ")
+    str_number = input(
+        f"Please enter in a number between {BOUND_LOWER} and {BOUND_UPPER}: "
+    )
     try:
         # Sanatize input and increment if success
         int_number = int(str_number)
@@ -37,5 +41,5 @@ while not (str_number == EXIT_CODE):
 
 # Output Results
 
-float_percent = total_guesses > 0 and correct_count/total_guesses * 100 or 0
+float_percent = total_guesses > 0 and correct_count / total_guesses * 100 or 0
 print(f"\nCorrect: {correct_count}/{total_guesses} ({float_percent:.02f}%)")

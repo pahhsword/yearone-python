@@ -20,6 +20,8 @@ try:
         price = 0
 
     # Output Price
-    print(f"Price: £{price:.02f} (£{LUGGAGE_CHARGE:.02f} for every {LUGGAGE_INCREMENT}kg over {MAX_LUGGAGE}kg)")
+    print(
+        f"Price: £{price:.02f} (£{LUGGAGE_CHARGE:.02f} for every {LUGGAGE_INCREMENT}kg over {MAX_LUGGAGE}kg)"
+    )
 except:
     print("Please input a number")
